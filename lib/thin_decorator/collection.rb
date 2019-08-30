@@ -1,4 +1,4 @@
-class ThinDecorator
+class ThinDecorator < SimpleDelegator
   class Collection < SimpleDelegator
     attr_reader :origin_klass
     attr_accessor :context

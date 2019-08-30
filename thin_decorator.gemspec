@@ -1,6 +1,6 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "thin_decorator"
+require "thin_decorator/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "thin_decorator"
@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "activesupport", "~> 6.0.0"
-  spec.add_development_dependency "coveralls"
+  spec.add_development_dependency "coveralls", "~> 0.8.0"
 end
