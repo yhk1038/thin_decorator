@@ -1,10 +1,8 @@
-# require "thin_decorator/version"
+
+require 'active_support'
+require 'active_support/core_ext'
 
 class ThinDecorator < SimpleDelegator
-  VERSION = "0.1.0"
-
-  class Error < StandardError; end
-
   attr_accessor :context
 
   def self.inherited(base)
@@ -61,31 +59,8 @@ class ThinDecorator < SimpleDelegator
   def resource_name
     model.class.name.underscore
   end
-
-  class Collection < SimpleDelegator
-    attr_reader :origin_klass
-    attr_accessor :context
-
-    def self.decorate(obj, context: :default)
-      instance = new(obj)
-      instance.context = context
-      instance
-    end
-
-    def as_json(options = {})
-      entries.map do |entry|
-        origin_klass.decorate(entry, context: context)
-      end
-    end
-
-    def origin_klass
-      @origin_klass = Module.nesting[1]
-    end
-
-    protected
-
-    def entries
-      @entries ||= __getobj__
-    end
-  end
 end
+
+require_relative './thin_decorator/collection'
+require_relative './thin_decorator/error'
+require_relative './thin_decorator/version'
