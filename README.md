@@ -1,6 +1,8 @@
 # ThinDecorator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/thin_decorator`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Build Status](https://travis-ci.org/yhk1038/thin_decorator.svg?branch=master)](https://travis-ci.org/yhk1038/thin_decorator) [![Coverage Status](https://coveralls.io/repos/github/yhk1038/thin_decorator/badge.svg?branch=master)](https://coveralls.io/github/yhk1038/thin_decorator?branch=master)
+
+Welcome to your new gem! In this directory, you'll find the files you need to be able  to package up your Ruby library into a gem. Put your Ruby code in the file `lib/thin_decorator`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
 
